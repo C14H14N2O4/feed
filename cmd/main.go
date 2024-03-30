@@ -31,7 +31,12 @@ func main() {
 			if len(os.Args) < 3 {
 				fmt.Println("Please provide a port")
 			} else {
-				listen.Listen()
+				result, err := listen.Listen()
+				if err != nil {
+					fmt.Println("Error:", err)
+					return
+				}
+				fmt.Println("Result:", result)
 				// if reflect.TypeOf(os.Args[2]).String() != "string" {
 				// 	fmt.Println("Invalid port selection")
 				// } else {
