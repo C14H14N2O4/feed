@@ -18,7 +18,6 @@ func Listen() (bool, error) {
 	}
 
 	// verify if port is open
-	// port 135 is open
 	if portStatus(port) {
 		fmt.Println(port + " is open")
 		return true, nil
