@@ -13,7 +13,7 @@ func main() {
 		switch os.Args[1] {
 		case "sitrep": // shows current chats
 			fmt.Println("sitrep")
-		case "burn": // clears all connections & all logs if implemented
+		case "burn": // clears all connections & all logs if implemented // -perma flag to add ips to ban list
 			fmt.Println("burn")
 		case "revoke": // revoke <<uid>> <<opt:PERMA>>: terminate connection, if perma flag given, add ip to ban list
 			fmt.Println("revoke")
@@ -27,7 +27,8 @@ func main() {
 			fmt.Println("status")
 		case "listen": // listen <<port>>: begins to listen at port <<port>> for incoming connections
 			fmt.Println("listen")
-		case "quarentine": // quarentine <<list>>: shows all connection requests // // quarentine <<purge, opt: PERMA>>: deletes all connection requests, optionally adds all ips to block list
+		case "quarantine": // quarantine <<list>>: shows all connection requests // // quarantine <<purge, opt: PERMA>>: deletes all connection requests, optionally adds all ips to block list
+			fmt.Println("quarantine")
 		case "help": // prints help info
 			fmt.Println("help")
 		default:
